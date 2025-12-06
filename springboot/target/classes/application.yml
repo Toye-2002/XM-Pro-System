@@ -1,0 +1,19 @@
+# \u66F4\u6539\u7AEF\u53E3
+server:
+  port: 9090
+
+# \u6570\u636E\u5E93\u8FDE\u63A5
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 668660
+    url: jdbc:mysql://localhost:3306/xm-pro?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+
+# 配置mybatis实体和xml映像
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 数据库下划线修改成为Java驼峰名的命名方式
+    map-underscore-to-camel-case: true
